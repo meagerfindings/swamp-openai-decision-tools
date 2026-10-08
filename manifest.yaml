@@ -1,0 +1,23 @@
+manifestVersion: 1
+name: "@mgreten/openai-decision-tools"
+version: "2026.10.08.1"
+description: >-
+  Agent-facing predicate, choice, and score judgments over supplied text or
+  scoped repository files using OpenAI Decisions. Inspired by IndyDevDan's
+  "10 Levels of Jev For Agentic Engineers" cheap-read and files-at-scale demos:
+  scout relevant source, classify file roles, triage existing test output, or
+  choose from available agents without filling the calling agent's context.
+  Multiple questions share one request; independent files use bounded internal
+  concurrency. Advisory only, with explicit refusals and answer-only results.
+  Independent of Jev. Live smoke examples: supplied failure triage in 369 ms,
+  two-file parallel scouting in 682 ms, and combined comparison in 399 ms.
+  Single-run processing measurements, not latency guarantees. See README for
+  exact queries, results, and privacy limits.
+license: MIT
+paths:
+  base: manifest
+models:
+  - extensions/models/openai_decision_tools.ts
+additionalFiles:
+  - README.md
+  - LICENSE.txt
