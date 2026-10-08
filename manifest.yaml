@@ -14,6 +14,7 @@ description: >-
   Single-run processing measurements, not latency guarantees. See README for
   exact queries, results, and privacy limits.
 license: MIT
+repository: https://github.com/meagerfindings/swamp-openai-decision-tools
 paths:
   base: manifest
 models:
