@@ -99,6 +99,18 @@ function result(harness: ReturnType<typeof setup>) {
   return model.resources.result.schema.parse(writes[0].data);
 }
 
+Deno.test("version upgrade advances existing instances without changing arguments", () => {
+  const original = {
+    apiKey: "vault-ref",
+    repositoryRoot: "/repo",
+    concurrency: 4,
+  };
+  const upgrade = model.upgrades[0];
+
+  assertEquals(upgrade.toVersion, model.version);
+  assertEquals(upgrade.upgradeAttributes(original), original);
+});
+
 Deno.test("method schemas strip Swamp's merged global arguments and retain strict questions", () => {
   const globals = {
     apiKey: "GLOBAL_KEY_MUST_NOT_BECOME_EVIDENCE",

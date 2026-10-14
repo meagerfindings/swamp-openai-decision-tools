@@ -609,7 +609,12 @@ async function writeResult(
 /** Typed, advisory agent tools backed by OpenAI's dedicated Decisions API. */
 export const model = {
   type: "@mgreten/openai-decision-tools",
-  version: "2026.10.08.1",
+  version: "2026.10.14.1",
+  upgrades: [{
+    toVersion: "2026.10.14.1",
+    description: "Version bump with no global-argument changes",
+    upgradeAttributes: (old: Record<string, unknown>) => old,
+  }],
   globalArguments: GlobalArgsSchema,
   resources: {
     result: {

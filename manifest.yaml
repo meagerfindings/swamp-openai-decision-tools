@@ -1,6 +1,6 @@
 manifestVersion: 1
 name: "@mgreten/openai-decision-tools"
-version: "2026.10.08.1"
+version: "2026.10.14.1"
 description: >-
   Agent-facing predicate, choice, and score judgments over supplied text or
   scoped repository files using OpenAI Decisions. Inspired by IndyDevDan's
